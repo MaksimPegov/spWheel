@@ -1,8 +1,6 @@
-<h1>
-  {{title}}
-
-</h1>
-<h3>
-  {{haha}}
-</h3>
-kjhkjhkjhkhkjh
+<div class="row colums">
+  <input type="text" (keyup.enter)="Send($event)" [(ngModel)]="message" />
+  <div>
+      <p *ngFor="let item of items | async">{{item.message}}</p>
+  </div>
+</div>   
