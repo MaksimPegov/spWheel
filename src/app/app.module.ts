@@ -9,12 +9,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDFnoD_8TUxTZ5k4Bq0DhvJi5qTrctCBH8",
-    authDomain: "todo-98a9b.firebaseapp.com",
-    databaseURL: "https://todo-98a9b.firebaseio.com",
-    projectId: "todo-98a9b",
-    storageBucket: "todo-98a9b.appspot.com",
-    messagingSenderId: "238695718446"
+    apiKey: "AIzaSyBa4kFyXdspW8EmZ5qx3XvHF7yqERKv3xY",
+    authDomain: "spwheel-80b62.firebaseapp.com",
+    databaseURL: "https://spwheel-80b62.firebaseio.com",
+    projectId: "spwheel-80b62",
+    storageBucket: "spwheel-80b62.appspot.com",
+    messagingSenderId: "103060809567"
   };
 
 @NgModule({

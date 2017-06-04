@@ -24850,6 +24850,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Version */]
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_index__ = __webpack_require__(33);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AngularFireAuth; });
 /* unused harmony export FirebaseAuthStateObservable */
+/* unused harmony export FirebaseIdTokenObservable */
 
 
 
@@ -24860,6 +24861,7 @@ var AngularFireAuth = (function () {
     function AngularFireAuth(app) {
         this.app = app;
         this.authState = FirebaseAuthStateObservable(app);
+        this.idToken = FirebaseIdTokenObservable(app);
         this.auth = app.auth();
     }
     return AngularFireAuth;
@@ -24876,6 +24878,12 @@ function FirebaseAuthStateObservable(app) {
         app.auth().onAuthStateChanged(function (user) { return observer.next(user); }, function (error) { return observer.error(error); }, function () { return observer.complete(); });
     });
     return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_observeOn__["observeOn"].call(authState, new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* ZoneScheduler */](Zone.current));
+}
+function FirebaseIdTokenObservable(app) {
+    var idToken = __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].create(function (observer) {
+        app.auth().onIdTokenChanged(function (user) { return observer.next(user); }, function (error) { return observer.error(error); }, function () { return observer.complete(); });
+    });
+    return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_observeOn__["observeOn"].call(idToken, new __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* ZoneScheduler */](Zone.current));
 }
 //# sourceMappingURL=auth.js.map
 
